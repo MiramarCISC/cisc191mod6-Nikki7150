@@ -9,6 +9,7 @@ public class GenericMatchQueue<T> {
     public void enqueue(T item) {
         // add the item to the back of the queue
         items.add(item);
+        // use addLast() to demonstrate explicit queue behavior
     }
 
     public T dequeue() {
@@ -18,6 +19,7 @@ public class GenericMatchQueue<T> {
             throw new IllegalStateException("Queue is empty");
         }
         return items.remove();
+        // removeFirst demonstrates better queue behavior
     }
 
     public T peek() {
@@ -35,6 +37,7 @@ public class GenericMatchQueue<T> {
             return true;
         }
         return false;
+        // could use return items.isEmpty() to make simpler
     }
 
     public int size() {
